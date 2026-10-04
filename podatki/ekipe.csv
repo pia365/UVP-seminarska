@@ -1,0 +1,331 @@
+kratica,leto,ime,play_off,zmage,porazi,tocke_na_tekmo,prejete_tocke_na_tekmo,srs
+CLE,2016,Cleveland Cavaliers,True,57,25,104.3,98.3,5.45
+TOR,2016,Toronto Raptors,True,56,26,102.7,98.2,4.08
+MIA,2016,Miami Heat,True,48,34,100.0,98.4,1.5
+ATL,2016,Atlanta Hawks,True,48,34,102.8,99.2,3.49
+BOS,2016,Boston Celtics,True,48,34,105.7,102.5,2.84
+CHO,2016,Charlotte Hornets,True,48,34,103.4,100.7,2.36
+IND,2016,Indiana Pacers,True,45,37,102.2,100.5,1.62
+DET,2016,Detroit Pistons,True,44,38,102.0,101.4,0.43
+CHI,2016,Chicago Bulls,False,42,40,101.6,103.1,-1.46
+WAS,2016,Washington Wizards,False,41,41,104.1,104.6,-0.5
+ORL,2016,Orlando Magic,False,35,47,102.1,103.7,-1.68
+MIL,2016,Milwaukee Bucks,False,33,49,99.0,103.2,-3.98
+NYK,2016,New York Knicks,False,32,50,98.4,101.1,-2.74
+BRK,2016,Brooklyn Nets,False,21,61,98.6,106.0,-7.12
+PHI,2016,Philadelphia 76ers,False,10,72,97.4,107.6,-9.92
+GSW,2016,Golden State Warriors,True,73,9,114.9,104.1,10.38
+SAS,2016,San Antonio Spurs,True,67,15,103.5,92.9,10.28
+OKC,2016,Oklahoma City Thunder,True,55,27,110.2,102.9,7.09
+LAC,2016,Los Angeles Clippers,True,53,29,104.5,100.2,4.13
+POR,2016,Portland Trail Blazers,True,44,38,105.1,104.3,0.98
+DAL,2016,Dallas Mavericks,True,42,40,102.3,102.6,-0.02
+MEM,2016,Memphis Grizzlies,True,42,40,99.1,101.3,-2.14
+HOU,2016,Houston Rockets,True,41,41,106.5,106.4,0.34
+UTA,2016,Utah Jazz,False,40,42,97.7,95.9,1.84
+SAC,2016,Sacramento Kings,False,33,49,106.6,109.1,-2.32
+DEN,2016,Denver Nuggets,False,33,49,101.9,105.0,-2.81
+NOP,2016,New Orleans Pelicans,False,30,52,102.7,106.5,-3.56
+MIN,2016,Minnesota Timberwolves,False,29,53,102.4,106.0,-3.38
+PHO,2016,Phoenix Suns,False,23,59,100.9,107.5,-6.32
+LAL,2016,Los Angeles Lakers,False,17,65,97.3,106.9,-8.92
+BOS,2017,Boston Celtics,True,53,29,108.0,105.4,2.25
+CLE,2017,Cleveland Cavaliers,True,51,31,110.3,107.2,2.87
+TOR,2017,Toronto Raptors,True,51,31,106.9,102.6,3.65
+WAS,2017,Washington Wizards,True,49,33,109.2,107.4,1.36
+ATL,2017,Atlanta Hawks,True,43,39,103.2,104.0,-1.23
+MIL,2017,Milwaukee Bucks,True,42,40,103.6,103.8,-0.45
+IND,2017,Indiana Pacers,True,42,40,105.1,105.3,-0.64
+CHI,2017,Chicago Bulls,True,41,41,102.9,102.4,0.03
+MIA,2017,Miami Heat,False,41,41,103.2,102.1,0.77
+DET,2017,Detroit Pistons,False,37,45,101.3,102.5,-1.29
+CHO,2017,Charlotte Hornets,False,36,46,104.9,104.7,-0.07
+NYK,2017,New York Knicks,False,31,51,104.3,108.0,-3.87
+ORL,2017,Orlando Magic,False,29,53,101.1,107.6,-6.61
+PHI,2017,Philadelphia 76ers,False,28,54,102.4,108.1,-5.83
+BRK,2017,Brooklyn Nets,False,20,62,105.8,112.5,-6.74
+GSW,2017,Golden State Warriors,True,67,15,115.9,104.3,11.35
+SAS,2017,San Antonio Spurs,True,61,21,105.3,98.1,7.13
+HOU,2017,Houston Rockets,True,55,27,115.3,109.6,5.84
+LAC,2017,Los Angeles Clippers,True,51,31,108.7,104.4,4.42
+UTA,2017,Utah Jazz,True,51,31,100.7,96.8,4.0
+OKC,2017,Oklahoma City Thunder,True,47,35,106.6,105.8,1.14
+MEM,2017,Memphis Grizzlies,True,43,39,100.5,100.0,0.96
+POR,2017,Portland Trail Blazers,True,41,41,107.9,108.5,-0.23
+DEN,2017,Denver Nuggets,False,40,42,111.7,111.2,0.7
+NOP,2017,New Orleans Pelicans,False,34,48,104.3,106.4,-1.69
+DAL,2017,Dallas Mavericks,False,33,49,97.9,100.8,-2.53
+SAC,2017,Sacramento Kings,False,32,50,102.8,106.7,-3.29
+MIN,2017,Minnesota Timberwolves,False,31,51,105.6,106.7,-0.64
+LAL,2017,Los Angeles Lakers,False,26,56,104.6,111.5,-6.29
+PHO,2017,Phoenix Suns,False,24,58,107.7,113.3,-5.14
+TOR,2018,Toronto Raptors,True,59,23,111.7,103.9,7.29
+BOS,2018,Boston Celtics,True,55,27,104.0,100.4,3.23
+PHI,2018,Philadelphia 76ers,True,52,30,109.8,105.3,4.3
+CLE,2018,Cleveland Cavaliers,True,50,32,110.9,109.9,0.59
+IND,2018,Indiana Pacers,True,48,34,105.6,104.2,1.18
+MIA,2018,Miami Heat,True,44,38,103.4,102.9,0.15
+MIL,2018,Milwaukee Bucks,True,44,38,106.5,106.8,-0.45
+WAS,2018,Washington Wizards,True,43,39,106.6,106.0,0.53
+DET,2018,Detroit Pistons,False,39,43,103.8,103.9,-0.26
+CHO,2018,Charlotte Hornets,False,36,46,108.2,108.0,0.07
+NYK,2018,New York Knicks,False,29,53,104.5,108.0,-3.53
+BRK,2018,Brooklyn Nets,False,28,54,106.6,110.3,-3.67
+CHI,2018,Chicago Bulls,False,27,55,102.9,110.0,-6.84
+ORL,2018,Orlando Magic,False,25,57,103.4,108.2,-4.92
+ATL,2018,Atlanta Hawks,False,24,58,103.4,108.8,-5.3
+HOU,2018,Houston Rockets,True,65,17,112.4,103.9,8.21
+GSW,2018,Golden State Warriors,True,58,24,113.5,107.5,5.79
+POR,2018,Portland Trail Blazers,True,49,33,105.6,103.0,2.6
+OKC,2018,Oklahoma City Thunder,True,48,34,107.9,104.4,3.42
+UTA,2018,Utah Jazz,True,48,34,104.1,99.8,4.47
+NOP,2018,New Orleans Pelicans,True,48,34,111.7,110.4,1.48
+SAS,2018,San Antonio Spurs,True,47,35,102.7,99.8,2.89
+MIN,2018,Minnesota Timberwolves,True,47,35,109.5,107.3,2.35
+DEN,2018,Denver Nuggets,False,46,36,110.0,108.5,1.57
+LAC,2018,Los Angeles Clippers,False,42,40,109.0,109.0,0.15
+LAL,2018,Los Angeles Lakers,False,35,47,108.1,109.6,-1.44
+SAC,2018,Sacramento Kings,False,27,55,98.8,105.8,-6.6
+DAL,2018,Dallas Mavericks,False,24,58,102.3,105.4,-2.7
+MEM,2018,Memphis Grizzlies,False,22,60,99.3,105.5,-5.81
+PHO,2018,Phoenix Suns,False,21,61,103.9,113.3,-8.8
+MIL,2019,Milwaukee Bucks,True,60,22,118.1,109.3,8.04
+TOR,2019,Toronto Raptors,True,58,24,114.4,108.4,5.49
+PHI,2019,Philadelphia 76ers,True,51,31,115.2,112.5,2.25
+BOS,2019,Boston Celtics,True,49,33,112.4,108.0,3.9
+IND,2019,Indiana Pacers,True,48,34,108.0,104.7,2.76
+BRK,2019,Brooklyn Nets,True,42,40,112.2,112.3,-0.4
+ORL,2019,Orlando Magic,True,42,40,107.3,106.6,0.28
+DET,2019,Detroit Pistons,True,41,41,107.0,107.3,-0.56
+CHO,2019,Charlotte Hornets,False,39,43,110.7,111.8,-1.32
+MIA,2019,Miami Heat,False,39,43,105.7,105.9,-0.45
+WAS,2019,Washington Wizards,False,32,50,114.0,116.9,-3.3
+ATL,2019,Atlanta Hawks,False,29,53,113.3,119.4,-6.06
+CHI,2019,Chicago Bulls,False,22,60,104.9,113.4,-8.32
+CLE,2019,Cleveland Cavaliers,False,19,63,104.5,114.1,-9.39
+NYK,2019,New York Knicks,False,17,65,104.6,113.8,-8.93
+GSW,2019,Golden State Warriors,True,57,25,117.7,111.2,6.42
+DEN,2019,Denver Nuggets,True,54,28,110.7,106.7,4.19
+POR,2019,Portland Trail Blazers,True,53,29,114.7,110.5,4.43
+HOU,2019,Houston Rockets,True,53,29,113.9,109.1,4.96
+UTA,2019,Utah Jazz,True,50,32,111.7,106.5,5.28
+OKC,2019,Oklahoma City Thunder,True,49,33,114.5,111.1,3.56
+SAS,2019,San Antonio Spurs,True,48,34,111.7,110.0,1.8
+LAC,2019,Los Angeles Clippers,True,48,34,115.1,114.3,1.09
+SAC,2019,Sacramento Kings,False,39,43,114.2,115.3,-0.81
+LAL,2019,Los Angeles Lakers,False,37,45,111.8,113.5,-1.33
+MIN,2019,Minnesota Timberwolves,False,36,46,112.5,114.0,-1.02
+MEM,2019,Memphis Grizzlies,False,33,49,103.5,106.1,-2.08
+NOP,2019,New Orleans Pelicans,False,33,49,115.4,116.8,-1.1
+DAL,2019,Dallas Mavericks,False,33,49,108.9,110.1,-0.87
+PHO,2019,Phoenix Suns,False,19,63,107.5,116.8,-8.61
+MIL,2020,Milwaukee Bucks,True,56,17,118.7,108.6,9.41
+TOR,2020,Toronto Raptors,True,53,19,112.8,106.5,5.97
+BOS,2020,Boston Celtics,True,48,24,113.7,107.3,5.83
+IND,2020,Indiana Pacers,True,45,28,109.4,107.5,1.63
+MIA,2020,Miami Heat,True,44,29,112.0,109.1,2.59
+PHI,2020,Philadelphia 76ers,True,43,30,110.7,108.4,2.25
+BRK,2020,Brooklyn Nets,True,35,37,111.8,112.3,-1.01
+ORL,2020,Orlando Magic,True,33,40,107.3,108.3,-0.93
+CHO,2020,Charlotte Hornets,False,23,42,102.9,109.6,-7.03
+WAS,2020,Washington Wizards,False,25,47,114.4,119.1,-5.24
+CHI,2020,Chicago Bulls,False,22,43,106.8,109.9,-4.0
+NYK,2020,New York Knicks,False,21,45,105.8,112.3,-6.72
+DET,2020,Detroit Pistons,False,20,46,107.2,110.8,-4.38
+ATL,2020,Atlanta Hawks,False,20,47,111.8,119.7,-7.71
+CLE,2020,Cleveland Cavaliers,False,19,46,106.9,114.8,-7.77
+LAL,2020,Los Angeles Lakers,True,52,19,113.4,107.6,6.28
+LAC,2020,Los Angeles Clippers,True,49,23,116.3,109.9,6.66
+DEN,2020,Denver Nuggets,True,46,27,111.3,109.2,2.35
+HOU,2020,Houston Rockets,True,44,28,117.8,114.8,3.13
+OKC,2020,Oklahoma City Thunder,True,44,28,110.4,108.4,2.33
+UTA,2020,Utah Jazz,True,44,28,111.3,108.8,2.52
+DAL,2020,Dallas Mavericks,True,43,32,117.0,112.1,4.87
+POR,2020,Portland Trail Blazers,True,35,39,115.0,116.1,-0.61
+MEM,2020,Memphis Grizzlies,False,34,39,112.6,113.7,-0.91
+PHO,2020,Phoenix Suns,False,34,39,113.6,113.4,0.56
+SAS,2020,San Antonio Spurs,False,32,39,114.1,115.2,-0.65
+SAC,2020,Sacramento Kings,False,31,41,110.1,112.1,-1.59
+NOP,2020,New Orleans Pelicans,False,30,42,115.8,117.1,-0.55
+MIN,2020,Minnesota Timberwolves,False,19,45,113.3,117.5,-4.02
+GSW,2020,Golden State Warriors,False,15,50,106.3,115.0,-8.12
+PHI,2021,Philadelphia 76ers,True,49,23,113.6,108.1,5.28
+BRK,2021,Brooklyn Nets,True,48,24,118.6,114.1,4.24
+MIL,2021,Milwaukee Bucks,True,46,26,120.1,114.2,5.57
+NYK,2021,New York Knicks,True,41,31,107.0,104.7,2.13
+ATL,2021,Atlanta Hawks,True,41,31,113.7,111.4,2.14
+MIA,2021,Miami Heat,True,40,32,108.1,108.0,-0.06
+BOS,2021,Boston Celtics,True,36,36,112.6,111.2,1.32
+WAS,2021,Washington Wizards,True,34,38,116.6,118.5,-1.85
+IND,2021,Indiana Pacers,False,34,38,115.3,115.3,-0.13
+CHO,2021,Charlotte Hornets,False,33,39,109.5,111.4,-1.94
+CHI,2021,Chicago Bulls,False,31,41,110.7,111.6,-0.94
+TOR,2021,Toronto Raptors,False,27,45,111.3,111.7,-0.54
+CLE,2021,Cleveland Cavaliers,False,22,50,103.8,112.3,-8.19
+ORL,2021,Orlando Magic,False,21,51,104.0,113.3,-9.02
+DET,2021,Detroit Pistons,False,20,52,106.6,111.1,-4.38
+UTA,2021,Utah Jazz,True,52,20,116.4,107.2,8.97
+PHO,2021,Phoenix Suns,True,51,21,115.3,109.5,5.67
+DEN,2021,Denver Nuggets,True,47,25,115.1,110.1,4.82
+LAC,2021,Los Angeles Clippers,True,47,25,114.0,107.8,6.02
+DAL,2021,Dallas Mavericks,True,42,30,112.4,110.2,2.26
+POR,2021,Portland Trail Blazers,True,42,30,116.1,114.3,1.81
+LAL,2021,Los Angeles Lakers,True,42,30,109.5,106.8,2.77
+GSW,2021,Golden State Warriors,False,39,33,113.7,112.7,1.1
+MEM,2021,Memphis Grizzlies,True,38,34,113.3,112.3,1.07
+SAS,2021,San Antonio Spurs,False,33,39,111.1,112.8,-1.58
+NOP,2021,New Orleans Pelicans,False,31,41,114.6,114.9,-0.2
+SAC,2021,Sacramento Kings,False,31,41,113.7,117.4,-3.45
+MIN,2021,Minnesota Timberwolves,False,23,49,112.1,117.7,-5.25
+OKC,2021,Oklahoma City Thunder,False,22,50,105.0,115.6,-10.13
+HOU,2021,Houston Rockets,False,17,55,108.8,116.7,-7.5
+MIA,2022,Miami Heat,True,53,29,110.0,105.6,4.23
+BOS,2022,Boston Celtics,True,51,31,111.8,104.5,7.02
+MIL,2022,Milwaukee Bucks,True,51,31,115.5,112.1,3.22
+PHI,2022,Philadelphia 76ers,True,51,31,109.9,107.3,2.57
+TOR,2022,Toronto Raptors,True,48,34,109.4,107.1,2.38
+CHI,2022,Chicago Bulls,True,46,36,111.6,112.0,-0.38
+BRK,2022,Brooklyn Nets,True,44,38,112.9,112.1,0.82
+CLE,2022,Cleveland Cavaliers,False,44,38,107.8,105.7,2.04
+ATL,2022,Atlanta Hawks,True,43,39,113.9,112.4,1.55
+CHO,2022,Charlotte Hornets,False,43,39,115.3,114.9,0.53
+NYK,2022,New York Knicks,False,37,45,106.5,106.6,-0.01
+WAS,2022,Washington Wizards,False,35,47,108.6,112.0,-3.23
+IND,2022,Indiana Pacers,False,25,57,111.5,114.9,-3.26
+DET,2022,Detroit Pistons,False,23,59,104.8,112.5,-7.36
+ORL,2022,Orlando Magic,False,22,60,104.2,112.2,-7.67
+PHO,2022,Phoenix Suns,True,64,18,114.8,107.3,6.94
+MEM,2022,Memphis Grizzlies,True,56,26,115.6,109.9,5.37
+GSW,2022,Golden State Warriors,True,53,29,111.0,105.5,5.52
+DAL,2022,Dallas Mavericks,True,52,30,108.0,104.7,3.12
+UTA,2022,Utah Jazz,True,49,33,113.6,107.6,5.67
+DEN,2022,Denver Nuggets,True,48,34,112.7,110.4,2.16
+MIN,2022,Minnesota Timberwolves,True,46,36,115.9,113.3,2.53
+LAC,2022,Los Angeles Clippers,False,42,40,108.4,108.4,0.09
+NOP,2022,New Orleans Pelicans,True,36,46,109.3,110.3,-0.84
+SAS,2022,San Antonio Spurs,False,34,48,113.2,113.0,0.02
+LAL,2022,Los Angeles Lakers,False,33,49,112.1,115.1,-3.08
+SAC,2022,Sacramento Kings,False,30,52,110.3,115.8,-5.26
+POR,2022,Portland Trail Blazers,False,27,55,106.2,115.1,-8.55
+OKC,2022,Oklahoma City Thunder,False,24,58,103.7,111.8,-7.9
+HOU,2022,Houston Rockets,False,20,62,109.7,118.2,-8.26
+MIL,2023,Milwaukee Bucks,True,58,24,116.9,113.3,3.61
+BOS,2023,Boston Celtics,True,57,25,117.9,111.4,6.38
+PHI,2023,Philadelphia 76ers,True,54,28,115.2,110.9,4.37
+CLE,2023,Cleveland Cavaliers,True,51,31,112.3,106.9,5.23
+NYK,2023,New York Knicks,True,47,35,116.0,113.1,2.99
+BRK,2023,Brooklyn Nets,True,45,37,113.4,112.5,1.03
+MIA,2023,Miami Heat,True,44,38,109.5,109.8,-0.13
+ATL,2023,Atlanta Hawks,True,41,41,118.4,118.1,0.32
+TOR,2023,Toronto Raptors,False,41,41,112.9,111.4,1.59
+CHI,2023,Chicago Bulls,False,40,42,113.1,111.8,1.37
+IND,2023,Indiana Pacers,False,35,47,116.3,119.5,-2.91
+WAS,2023,Washington Wizards,False,35,47,113.2,114.4,-1.06
+ORL,2023,Orlando Magic,False,34,48,111.4,114.0,-2.39
+CHO,2023,Charlotte Hornets,False,27,55,111.0,117.2,-5.89
+DET,2023,Detroit Pistons,False,17,65,110.3,118.5,-7.73
+DEN,2023,Denver Nuggets,True,53,29,115.8,112.5,3.04
+MEM,2023,Memphis Grizzlies,True,51,31,116.9,113.0,3.6
+SAC,2023,Sacramento Kings,True,48,34,120.7,118.1,2.3
+PHO,2023,Phoenix Suns,True,45,37,113.6,111.6,2.08
+LAC,2023,Los Angeles Clippers,True,44,38,113.6,113.1,0.31
+GSW,2023,Golden State Warriors,True,44,38,118.9,117.1,1.66
+LAL,2023,Los Angeles Lakers,True,43,39,117.2,116.6,0.43
+MIN,2023,Minnesota Timberwolves,True,42,40,115.8,115.8,-0.22
+NOP,2023,New Orleans Pelicans,False,42,40,114.4,112.5,1.63
+OKC,2023,Oklahoma City Thunder,False,40,42,117.5,116.4,0.96
+DAL,2023,Dallas Mavericks,False,38,44,114.2,114.1,-0.14
+UTA,2023,Utah Jazz,False,37,45,117.1,118.0,-1.03
+POR,2023,Portland Trail Blazers,False,33,49,113.4,117.4,-3.96
+HOU,2023,Houston Rockets,False,22,60,110.7,118.6,-7.62
+SAS,2023,San Antonio Spurs,False,22,60,113.0,123.1,-9.82
+BOS,2024,Boston Celtics,True,64,18,120.6,109.2,10.75
+NYK,2024,New York Knicks,True,50,32,112.8,108.2,4.36
+MIL,2024,Milwaukee Bucks,True,49,33,119.0,116.4,2.44
+CLE,2024,Cleveland Cavaliers,True,48,34,112.6,110.2,1.98
+ORL,2024,Orlando Magic,True,47,35,110.5,108.4,1.48
+IND,2024,Indiana Pacers,True,47,35,123.3,120.2,2.75
+PHI,2024,Philadelphia 76ers,True,47,35,114.6,111.5,2.51
+MIA,2024,Miami Heat,True,46,36,110.1,108.4,1.1
+CHI,2024,Chicago Bulls,False,39,43,112.3,113.7,-1.77
+ATL,2024,Atlanta Hawks,False,36,46,118.3,120.5,-2.38
+BRK,2024,Brooklyn Nets,False,32,50,110.4,113.3,-3.02
+TOR,2024,Toronto Raptors,False,25,57,112.4,118.8,-6.45
+CHO,2024,Charlotte Hornets,False,21,61,106.6,116.8,-10.12
+WAS,2024,Washington Wizards,False,15,67,113.7,123.0,-9.29
+DET,2024,Detroit Pistons,False,14,68,109.9,119.0,-9.06
+OKC,2024,Oklahoma City Thunder,True,57,25,120.1,112.7,7.36
+DEN,2024,Denver Nuggets,True,57,25,114.9,109.6,5.23
+MIN,2024,Minnesota Timberwolves,True,56,26,113.0,106.5,6.39
+LAC,2024,Los Angeles Clippers,True,51,31,115.6,112.3,3.41
+DAL,2024,Dallas Mavericks,True,50,32,117.9,115.6,2.3
+PHO,2024,Phoenix Suns,True,49,33,116.2,113.2,3.08
+NOP,2024,New Orleans Pelicans,True,49,33,115.1,110.7,4.46
+LAL,2024,Los Angeles Lakers,True,47,35,118.0,117.4,1.07
+SAC,2024,Sacramento Kings,False,46,36,116.6,114.8,2.29
+GSW,2024,Golden State Warriors,False,46,36,117.8,115.2,2.77
+HOU,2024,Houston Rockets,False,41,41,114.3,113.2,1.24
+UTA,2024,Utah Jazz,False,31,51,115.7,120.5,-4.22
+MEM,2024,Memphis Grizzlies,False,27,55,105.8,112.8,-6.57
+SAS,2024,San Antonio Spurs,False,22,60,112.1,118.6,-5.8
+POR,2024,Portland Trail Blazers,False,21,61,106.4,115.4,-8.29
+CLE,2025,Cleveland Cavaliers,True,64,18,121.9,112.4,8.81
+BOS,2025,Boston Celtics,True,61,21,116.3,107.2,8.28
+NYK,2025,New York Knicks,True,51,31,115.8,111.7,3.59
+IND,2025,Indiana Pacers,True,50,32,117.4,115.1,1.68
+MIL,2025,Milwaukee Bucks,True,48,34,115.5,113.0,2.12
+DET,2025,Detroit Pistons,True,44,38,115.5,113.6,1.73
+ORL,2025,Orlando Magic,True,41,41,105.4,105.5,-0.7
+ATL,2025,Atlanta Hawks,False,40,42,118.2,119.3,-1.41
+CHI,2025,Chicago Bulls,False,39,43,117.8,119.4,-1.83
+MIA,2025,Miami Heat,True,37,45,110.6,110.0,0.11
+TOR,2025,Toronto Raptors,False,30,52,110.9,115.2,-4.4
+BRK,2025,Brooklyn Nets,False,26,56,105.1,112.2,-6.95
+PHI,2025,Philadelphia 76ers,False,24,58,109.6,115.8,-6.29
+CHO,2025,Charlotte Hornets,False,19,63,105.1,114.2,-9.1
+WAS,2025,Washington Wizards,False,18,64,108.0,120.4,-12.14
+OKC,2025,Oklahoma City Thunder,True,68,14,120.5,107.6,12.7
+HOU,2025,Houston Rockets,True,52,30,114.3,109.8,4.97
+LAL,2025,Los Angeles Lakers,True,50,32,113.4,112.2,1.45
+DEN,2025,Denver Nuggets,True,50,32,120.8,116.9,3.97
+LAC,2025,Los Angeles Clippers,True,50,32,112.9,108.2,4.84
+MIN,2025,Minnesota Timberwolves,True,49,33,114.3,109.3,5.15
+GSW,2025,Golden State Warriors,True,48,34,113.8,110.5,3.56
+MEM,2025,Memphis Grizzlies,True,48,34,121.7,116.9,4.79
+SAC,2025,Sacramento Kings,False,40,42,115.7,115.3,0.58
+DAL,2025,Dallas Mavericks,False,39,43,114.2,115.4,-0.74
+PHO,2025,Phoenix Suns,False,36,46,113.6,116.6,-2.55
+POR,2025,Portland Trail Blazers,False,36,46,110.9,113.9,-2.67
+SAS,2025,San Antonio Spurs,False,34,48,113.9,116.7,-2.45
+NOP,2025,New Orleans Pelicans,False,21,61,109.8,119.3,-8.59
+UTA,2025,Utah Jazz,False,17,65,111.9,121.2,-8.51
+DET,2026,Detroit Pistons,True,60,22,117.8,109.6,7.53
+BOS,2026,Boston Celtics,True,56,26,114.9,107.2,7.37
+NYK,2026,New York Knicks,True,53,29,116.5,110.1,6.05
+CLE,2026,Cleveland Cavaliers,True,52,30,119.5,115.4,3.78
+TOR,2026,Toronto Raptors,True,46,36,114.6,111.8,2.75
+ATL,2026,Atlanta Hawks,True,46,36,118.5,116.0,2.38
+PHI,2026,Philadelphia 76ers,True,45,37,115.9,116.1,-0.27
+ORL,2026,Orlando Magic,True,45,37,115.7,115.1,0.81
+CHO,2026,Charlotte Hornets,False,44,38,116.0,111.2,4.48
+MIA,2026,Miami Heat,False,43,39,120.9,118.5,2.35
+MIL,2026,Milwaukee Bucks,False,32,50,110.6,116.8,-6.12
+CHI,2026,Chicago Bulls,False,31,51,116.3,121.5,-5.09
+BRK,2026,Brooklyn Nets,False,20,62,105.9,115.9,-9.7
+IND,2026,Indiana Pacers,False,19,63,112.4,120.4,-7.64
+WAS,2026,Washington Wizards,False,17,65,112.9,124.9,-11.62
+OKC,2026,Oklahoma City Thunder,True,64,18,119.0,107.9,11.04
+SAS,2026,San Antonio Spurs,True,62,20,119.8,111.5,8.28
+DEN,2026,Denver Nuggets,True,54,28,122.1,116.9,4.97
+LAL,2026,Los Angeles Lakers,True,53,29,116.3,114.6,1.68
+HOU,2026,Houston Rockets,True,52,30,115.2,110.0,4.87
+MIN,2026,Minnesota Timberwolves,True,49,33,118.0,114.6,3.07
+PHO,2026,Phoenix Suns,True,45,37,112.6,111.1,1.75
+POR,2026,Portland Trail Blazers,True,42,40,115.5,115.8,-0.29
+LAC,2026,Los Angeles Clippers,False,42,40,113.8,112.6,0.96
+GSW,2026,Golden State Warriors,False,37,45,114.6,115.2,-0.34
+NOP,2026,New Orleans Pelicans,False,26,56,115.5,120.0,-4.26
+DAL,2026,Dallas Mavericks,False,26,56,114.1,119.6,-5.33
+MEM,2026,Memphis Grizzlies,False,25,57,114.7,120.7,-5.83
+SAC,2026,Sacramento Kings,False,22,60,111.0,121.0,-9.58
+UTA,2026,Utah Jazz,False,22,60,117.6,126.0,-8.05

@@ -69,6 +69,3 @@ def pridobi_ekipe(leto):
             print(f"Ekipa {kratica} {leto} je na voljo.")
 
 
-if __name__ == "__main__":
-    pridobi_sezone(LETA)
-    pridobi_ekipe(2026)

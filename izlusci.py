@@ -3,7 +3,10 @@ import html
 import os
 import re
 
-MAPA_HTML = "html"
+MAPA_HTML = "html"  # mapa s shranjenimi stranmi (jih ustvari pridobi.py)
+
+# Podatke iz HTML-ja izluščimo v dveh korakih: najprej z enim vzorcem
+# poiščemo vrstico tabele (<tr>), nato z drugim v njej posamezne celice (<td>).
 
 # Vrstica tabele na strani sezone: povezava do ekipe in vse celice za njo.
 VZOREC_EKIPE = re.compile(
@@ -29,7 +32,9 @@ VZOREC_IGRALCA = re.compile(
 )
 
 # Ena celica v vrstici igralca: atributi in vsebina (lahko vsebuje značke).
-VZOREC_TD = re.compile(r"<td(?P<atributi>[^>]*)>(?P<vsebina>.*?)</td>", re.DOTALL)
+VZOREC_TD = re.compile(
+    r"<td(?P<atributi>[^>]*)>(?P<vsebina>.*?)</td>", re.DOTALL
+)
 
 # Vrstica tabele statistike na tekmo: ID igralca in vse celice za njim.
 VZOREC_STATISTIKE = re.compile(
@@ -39,7 +44,7 @@ VZOREC_STATISTIKE = re.compile(
     re.DOTALL,
 )
 
-# Polje na strani: (ime stolpca pri nas, tip vrednosti).
+# Polja iz tabele statistike: ime polja na strani -> (naše ime, tip vrednosti).
 POLJA_STATISTIKE = {
     "age": ("starost", int),
     "games": ("tekme", int),
@@ -66,7 +71,11 @@ POLJA_STATISTIKE = {
 }
 
 
+# --- Pomožne funkcije --------------------------------------------------
+
+
 def preberi_stran(pot):
+    """Prebere shranjeno spletno stran in vrne njeno besedilo."""
     with open(pot, encoding="utf-8") as dat:
         return dat.read()
 
@@ -76,12 +85,24 @@ def pocisti(besedilo):
     return html.unescape(re.sub(r"<[^>]+>", "", besedilo)).strip()
 
 
+def v_stevilo(niz, tip):
+    """Pretvori besedilo v število; prazna celica pomeni manjkajoč podatek."""
+    return tip(niz) if niz else None
+
+
 def visina_v_cm(niz):
     """Pretvori višino iz oblike '6-8' (čevlji-palci) v centimetre."""
     if not niz:
         return None
     cevlji, palci = niz.split("-")
     return round((int(cevlji) * 12 + int(palci)) * 2.54)
+
+
+def datum_v_iso(niz):
+    """Pretvori datum iz oblike 'November 7, 1999' v '1999-11-07'."""
+    if not niz:
+        return None
+    return datetime.datetime.strptime(niz, "%B %d, %Y").date().isoformat()
 
 
 def celice_igralca(besedilo):
@@ -93,11 +114,9 @@ def celice_igralca(besedilo):
             celice[polje.group(1)] = pocisti(celica["vsebina"])
     return celice
 
-def datum_v_iso(niz):
-    """Pretvori datum iz oblike 'November 7, 1999' v '1999-11-07'."""
-    if not niz:
-        return None
-    return datetime.datetime.strptime(niz, "%B %d, %Y").date().isoformat()
+
+# --- Izluščenje podatkov -----------------------------------------------
+
 
 def ekipe_v_sezoni(leto):
     """Iz strani sezone izlušči ekipe in njihovo statistiko v tej sezoni."""
@@ -113,7 +132,7 @@ def ekipe_v_sezoni(leto):
             "kratica": najdba["kratica"],
             "ime": najdba["ime"],
             "leto": int(najdba["leto"]),
-            "play_off": najdba["zvezdica"] == "*",
+            "play_off": najdba["zvezdica"] == "*",  # * = uvrstitev v končnico
             "zmage": int(celice["wins"]),
             "porazi": int(celice["losses"]),
             "tocke_na_tekmo": float(celice["pts_per_g"]),
@@ -132,9 +151,16 @@ def igralci_v_ekipi(kratica, leto):
 
     for najdba in VZOREC_IGRALCA.finditer(vsebina):
         celice = celice_igralca(najdba["celice"])
-        teza = celice.get("weight")
+
+        # Oznaka "R" pri izkušnjah pomeni novinca (rookie), torej 0 let.
         izkusnje = celice.get("years_experience")
+        if izkusnje == "R":
+            izkusnje = "0"
+
+        # Celica z državo vsebuje zastavo in oznako (npr. "ca CA"),
+        # zato vzamemo zadnjo besedo.
         drzava = celice.get("flag", "").split()
+
         igralci[najdba["id"]] = {
             "id": najdba["id"],
             "ime": html.unescape(najdba["ime"]),
@@ -143,22 +169,18 @@ def igralci_v_ekipi(kratica, leto):
             "stevilka": najdba["stevilka"] or None,
             "pozicija": celice.get("pos"),
             "visina_cm": visina_v_cm(celice.get("height")),
-            "teza_lb": int(teza) if teza else None,
+            "teza_lb": v_stevilo(celice.get("weight"), int),
             "datum_rojstva": datum_v_iso(celice.get("birth_date")),
             "drzava": drzava[-1] if drzava else None,
-            "izkusnje": 0 if izkusnje == "R" else (int(izkusnje) if izkusnje else None),
+            "izkusnje": v_stevilo(izkusnje, int),
             "fakulteta": celice.get("college") or None,
         }
 
     return list(igralci.values())
 
-def v_stevilo(niz, tip):
-    """Pretvori besedilo v število; prazna celica pomeni manjkajoč podatek."""
-    return tip(niz) if niz else None
-
 
 def izlusci_tabelo(kratica, leto, tabela, polja):
-    """Iz strani ekipe izlušči tabelo z danim ID-jem (npr. 'advanced').
+    """Iz strani ekipe izlušči tabelo z danim ID-jem (npr. 'per_game_stats').
 
     Polja določajo, katere stolpce vzamemo in kako jih poimenujemo.
     """
@@ -182,14 +204,8 @@ def izlusci_tabelo(kratica, leto, tabela, polja):
 
 
 def statistika_igralcev(kratica, leto, tabela="per_game_stats"):
-    """Statistika na tekmo: 'per_game_stats' je redni del, 'per_game_stats_post' končnica."""
-    return izlusci_tabelo(kratica, leto, tabela, POLJA_STATISTIKE)
+    """Izlušči statistiko igralcev na tekmo.
 
-if __name__ == "__main__":
-    redni_del = statistika_igralcev("BOS", 2026)
-    koncnica = statistika_igralcev("BOS", 2026, "per_game_stats_post")
-    print(len(redni_del), len(koncnica))
-    for ime, seznam in (("redni del", redni_del), ("koncnica", koncnica)):
-        for zapis in seznam:
-            if zapis["id_igralca"] == "tatumja01":
-                print(ime, zapis)
+    'per_game_stats' je redni del sezone, 'per_game_stats_post' končnica.
+    """
+    return izlusci_tabelo(kratica, leto, tabela, POLJA_STATISTIKE)

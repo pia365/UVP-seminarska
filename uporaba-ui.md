@@ -1,3 +1,139 @@
+Jaz:
+Ta setdefault mi ni najbolj jasen. Zakaj ga potrebujemo?
+
+Claude:
+setdefault doda igralca v slovar samo, če njegov ID še ne obstaja. Če se isti igralec pojavi še enkrat, se obstoječi zapis ohrani.
+
+To je pomembno, ker se lahko igralec pojavi v več sezonah oziroma pri več ekipah, vendar želimo osnovne podatke o njem v tabeli igralci samo enkrat.
+
+Jaz:
+Aha, torej nastopi ni isto kot igralci. igralci je seznam edinstvenih igralcev, nastopi pa povezava igralca z ekipo in sezono.
+
+Claude:
+Tako je.
+
+Jaz:
+Kaj pa ta del s per_game_stats in per_game_stats_post? Ne razumem, zakaj imava dve tabeli in potem še True in False.
+
+for tabela, koncnica in (
+    ("per_game_stats", False),
+    ("per_game_stats_post", True)
+):
+    zapisi = izlusci.statistika_igralcev(kratica, leto, tabela)
+    for zapis in zapisi:
+        zapis["koncnica"] = koncnica
+        statistika.append(zapis)
+
+Claude:
+Prva tabela vsebuje statistiko rednega dela, druga pa statistiko končnice. Namesto da bi ju shranili v dve ločeni končni tabeli, ju združimo v statistika.csv in dodamo stolpec koncnica.
+
+Pri rednem delu je vrednost False, pri končnici pa True, zato lahko kasneje ločimo obe vrsti podatkov.
+
+Jaz:
+Zdaj imam še eno težavo. Ko ponovno zaženem main.py, se mi zdi, kot da program spet nekaj dolgo dela. Ali se vsakič znova prenesejo vse spletne strani?
+
+Claude:
+Ne. Tukaj je pomembna razlika med python main.py pridobi in python main.py.
+
+Pri python main.py pridobi se izvede prenos spletnih strani. Strani se shranijo v mapo html/.
+
+Pri običajnem:
+
+python main.py
+
+se spletne strani ne prenašajo. Program prebere že shranjenih 341 HTML-datotek, iz njih ponovno izlušči podatke in ustvari CSV-datoteke.
+
+Jaz:
+Aha, potem sem očitno narobe razumela, kaj se dogaja. Mislila sem, da vsakič znova čaka na spletno stran.
+
+Claude:
+Ne, čakanje je posledica obdelave že shranjenih datotek. Prenos in izluščanje sta ločena koraka.
+
+Jaz:
+Še ta del bi rada razumela, ker se mi zdi precej "Pythonovski":
+
+if __name__ == "__main__":
+
+Kaj točno to naredi?
+
+Claude:
+Ta pogoj določi, ali se bo glavni del programa izvedel. Če main.py zaženeš neposredno, je pogoj resničen. Če ga druga datoteka samo uvozi, se glavni del ne izvede.
+
+To je pomembno, ker ne želimo, da bi se celoten program zagnal že samo zato, ker je bil main.py uvožen.
+
+Jaz:
+Kaj pa sys.argv? Zakaj sploh potrebujem sys?
+
+Claude:
+sys.argv omogoča dostop do argumentov, ki jih podaš ob zagonu programa.
+
+Če napišeš:
+
+python main.py pridobi
+
+je sys.argv[1] enak "pridobi".
+
+Zato lahko program preveri:
+
+if len(sys.argv) > 1 and sys.argv[1] == "pridobi":
+
+in prenos zažene samo takrat, ko ga izrecno zahtevaš.
+
+Jaz:
+Na koncu imam še:
+
+podatki = zberi_podatke(LETA)
+shrani.shrani_vse(*podatki)
+
+Kaj pomeni *podatki?
+
+Claude:
+zberi_podatke() vrne štiri vrednosti:
+
+return ekipe, list(igralci.values()), nastopi, statistika
+
+*podatki te štiri vrednosti razpakira in jih funkciji shrani_vse() poda kot štiri ločene argumente.
+
+Torej je:
+
+shrani.shrani_vse(*podatki)
+
+v tem primeru podobno kot:
+
+shrani.shrani_vse(
+    ekipe,
+    igralci,
+    nastopi,
+    statistika
+)
+Jaz:
+Zdaj imam narejene štiri datoteke: pridobi.py, izlusci.py, shrani.py in main.py. Rada bi, da skupaj preveriva, ali je struktura programa smiselna in ali vse skupaj deluje pravilno.
+
+Claude:
+Pregledala sem vse štiri datoteke. Struktura je smiselna: pridobi.py skrbi za prenos spletnih strani, izlusci.py za izluščanje podatkov, shrani.py za zapis v CSV, main.py pa povezuje posamezne korake.
+
+Pri main.py je ena težava tudi pri slogu kode – flake8 opozori na predolgo vrstico. To lahko popravimo, ne da bi spremenili delovanje programa.
+
+Jaz:
+Okej, popravi to, ampak rada bi tudi razumela, kaj se dejansko dogaja v main.py, ker mi nekateri deli niso jasni.
+
+Claude:
+Glavni del je funkcija zberi_podatke(leta). Ta gre skozi sezone, nato skozi ekipe posamezne sezone, nato skozi igralce in njihove statistike.
+
+Pomemben del je:
+
+for leto in leta:
+    for ekipa in izlusci.ekipe_v_sezoni(leto):
+        ekipe.append(ekipa)
+        kratica = ekipa["kratica"]
+
+Najprej se gre čez posamezne sezone, znotraj njih pa čez ekipe.
+
+Pri igralcih je uporabljeno:
+
+for igralec in izlusci.igralci_v_ekipi(kratica, leto):
+    igralci.setdefault(igralec["id"], igralec)
+    nastopi.append(dict(igralec, id_igralca=igralec["id"]))
 Jaz: Program pri dostopu do strani vrne napako 403. Kaj naj popravim?
 
 Claude: Pojasnil sem, da koda 403 pomeni, da strežnik zahtevek zavrača. Predlagal sem uporabo popolnejših glav zahtevka, predvsem User-Agent, ter preverjanje dostopa do več strani. Opozoril sem, da zaščite spletne strani ni primerno zaobiti.
@@ -42,17 +178,13 @@ Jaz: [Prilepljen zvezek v obliki Pythonove skripte.]
 
 Claude: Pri pregledu sem našel manjkajočo celico z boxplotom, vprašanje o starosti, podvojene uvoze, neuporabljen seaborn, podvojene izračune in odvečno celico, povezano z napredno.csv. Predlagal sem preureditev zvezka in poenostavitev kode.
 
-Jaz: To je trenutno stanje mojega zvezka. Natančno ga preglej in povej, kaj je treba popraviti, skrajšati ali poenostaviti, da bo primeren za čim boljšo oceno. Pri vsakem grafu ni treba podrobno opisovati rezultatov, dovolj je glavna ugotovitev.
+Jaz: To je trenutno stanje mojega zvezka. Natančno ga preglej in povej, kaj je treba popraviti, skrajšati ali poenostaviti. Pri vsakem grafu ni treba podrobno opisovati rezultatov, dovolj je glavna ugotovitev.
 
 Claude: Pri pregledu sem našel nekaj nedoslednosti. Ena od ugotovitev se je sklicevala na razsevni diagram, ki ga v končni različici zvezka ni bilo več. Opozoril sem tudi na nedoslednost med navedbo »deset let« in dejanskim številom enajstih sezon ter na nekaj trditev, ki niso bile neposredno podprte s prikazanimi podatki. Predlagal sem krajše ugotovitve in nov zaključek.
 
 Jaz: Ali so vse datoteke v mapi projekta potrebne? Kaj je __pycache__? Ko to uredimo, bom trenutno različico objavila na GitHubu.
 
 Claude: Pojasnil sem, da mapo __pycache__ Python ustvari sam in da ni del projekta, zato je vključena v .gitignore. Razložil sem tudi oznaki U in M, ki prikazujeta stanje datotek glede na Git. Opozoril sem, da html/ še ni bil vključen v .gitignore, da je README.md zastarel in da manjka datoteka uporaba-ui.md.
-
-Jaz: Zdaj želim iti skozi programsko kodo vrstico za vrstico, ker moram pri zagovoru razumeti celoten projekt. Dodala bi tudi komentarje, da bo profesor lažje videl, kaj posamezni deli kode počnejo. Če je katera vrstica nepotrebna, mi povej.
-
-Claude: Začel sem z datoteko pridobi.py in jo razložil vrstico za vrstico. Predlagal sem komentarje, uporabo konstante OSNOVNI_URL namesto ponavljanja istega spletnega naslova in docstring pri funkciji pridobi_sezone.
 
 Jaz: [Prilepljena datoteka izlusci.py.]
 

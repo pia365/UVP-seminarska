@@ -1,6 +1,6 @@
 # Analiza lige NBA (sezone 2016–2026)
 
-Projektna naloga pri predmetu Uvod v programiranje (FMF, Univerza v Ljubljani).
+Projektna naloga pri predmetu Uvod v programiranje.
 
 Program s spletne strani [Basketball-Reference](https://www.basketball-reference.com) zajame podatke o ekipah in igralcih lige NBA za enajst sezon, jih shrani v štiri povezane CSV tabele in v Jupyter Notebooku analizira, kako se je igra spreminjala in kdo so najpomembnejši igralci.
 

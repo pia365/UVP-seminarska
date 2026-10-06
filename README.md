@@ -84,13 +84,3 @@ Rezultati so v `analiza.ipynb`. Vprašanja so razvrščena v tri skupine:
 10. Kako visoki so igralci?
 11. Iz katerih fakultet prihajajo igralci?
 
-### Glavne ugotovitve
-
-- Ekipe so med sezonama 2016 in 2026 bistveno več metale trojke (poskusi so se povečali s 24,1 na 37,0 na tekmo), točke ekipe pa so zrasle precej manj.
-- Delež zmag je najmočneje povezan z razliko med doseženimi in prejetimi točkami (korelacija 0,97), zadete trojke imajo zmerno povezavo (0,36).
-- Najuspešnejša ekipa v povprečju enajstih sezon so Boston Celtics, najboljša posamezna sezona pa sezona 2016 Golden State Warriors (73 zmag).
-- Pozicija močno vpliva na skoke, asistence in višino igralcev.
-
-## Uporaba umetne inteligence
-
-Pri nastajanju projekta sem uporabljala umetno inteligenco (Claude). Kaj je naredila ona in kaj sem naredila jaz, je opisano v datoteki `uporaba-ui.md`, celoten potek pogovora pa je v datoteki `uporaba-ui-celoten-pogovor.md`.
